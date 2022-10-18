@@ -1,0 +1,22 @@
+.titleEdit{
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.formEditCont{
+    width: 90%;
+    margin: auto;
+    position: relative;
+    top: 140px;
+    padding: 20px;
+    background-color: #EEE;
+}
+
+.contBtns{
+    margin: 20px auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
