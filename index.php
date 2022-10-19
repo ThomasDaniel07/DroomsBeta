@@ -23,12 +23,13 @@
         <div class="mb-3">
           <label  class="form-label" for="userInput">Usuario</label>
           <input type="text" id="userInput" class="form-control" name="user" aria-describedby="usuarioInfo">
-          <div class="form-text">
-            Nunca compartiremos su correo electrónico con nadie más.</div>
         </div>
         <div class="mb-3">
           <label class="form-label" for="passwordInput">Contraseña</label>
           <input type="password" id="passwordInput" name="password" class="form-control">
+          <div class="form-text">
+            Nunca compartiremos sus datos con nadie más.
+          </div>
         </div>
         <button type="submit" class="btn btn-primary">Iniciar Sesion</button>
           <?php

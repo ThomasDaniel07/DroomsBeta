@@ -37,6 +37,10 @@ btn.addEventListener('click', async(e)=>{
 
         
     }else {
-        alert('Favor llenar todo los campos')
+        Swal.fire({
+            icon: 'warning',
+            title: 'Oops...',
+            text: result.MESSAGE,
+        })
     }
 })
