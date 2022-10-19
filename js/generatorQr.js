@@ -1,3 +1,33 @@
+$(buscarDatos());
+
+const containerResult = document.querySelector('.contTable');
+
+function buscarDatos (consulta) {
+    $.ajax ({ 
+        url : '../php/generatonQr.php',
+        type: 'POST',
+        dataType : 'html',
+        data : {consulta : consulta},
+    })
+    .done(function(respuesta) {
+        containerResult.innerHTML = respuesta;
+    })
+    .fail(function (){
+        containerResult.innerHTML = respuesta;
+    })
+}
+
+
+$(document).on('keyup','#cajaSearch', function(){
+    let valor = $(this).val();
+    if (valor != "") {
+        buscarDatos(valor);
+    }else {
+        buscarDatos();
+    }
+})
+
+
 const id = document.getElementById('id');
 const name = document.getElementById('name')
 const age = document.getElementById('age')
@@ -7,11 +37,8 @@ const formulario = document.getElementById('formularioG')
 const btn = document.getElementById('btnG')
 const contQr = document.getElementById('codigoQr')
 
-
-
-btn.addEventListener('click', async(e)=>{
+btn.addEventListener('click', (e)=>{
     e.preventDefault();
-    if ((id.value) != '' && (name.value)!= '' & (age.value) != '' & (grade.value) != '' & (entity.value) != '') {
         const DataQr = {
             'id':id.value,
             'name':name.value,
@@ -20,27 +47,13 @@ btn.addEventListener('click', async(e)=>{
             'entity':entity.value,
             'state':'Almorzado'
         }
-        const DataBd = {
-            'id':id.value,
-            'name':name.value,
-            'age':age.value,
-            'grade':grade.value,
-            'entity':entity.value,
-            'state':'Sin Almorzar'
+        if (contQr.innerHTML == '') {
+            const Qr = new QRCode (contQr,{
+                text: JSON.stringify(DataQr),
+                colorDark : "#000000",
+                colorLight : "#ffffff",
+                correctLevel : QRCode.CorrectLevel.M
+            })
         }
-        const Qr = new QRCode (contQr,{
-            text: JSON.stringify(DataQr),
-            colorDark : "#000000",
-            colorLight : "#ffffff",
-            correctLevel : QRCode.CorrectLevel.M
-        });
 
-        
-    }else {
-        Swal.fire({
-            icon: 'warning',
-            title: 'Oops...',
-            text: result.MESSAGE,
-        })
-    }
 })

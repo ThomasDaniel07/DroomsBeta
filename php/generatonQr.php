@@ -43,7 +43,7 @@ if ($result->num_rows > 0) {
                             <th>".$row['grade']."</th>    
                             <th>".$row['entity']."</th>    
                             <th>".$row['state']."</th>    
-                            <th><a class='btn btn-primary'href='editView.php?id=$id'>Seleccionar</a></th>
+                            <th><a class='btn btn-success'href='generatorQr.php?id=$id'>Seleccionar</a></th>
                         </tr>";
         }
         $out.="</tbody></table>";

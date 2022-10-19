@@ -54,40 +54,14 @@ if (empty($_SESSION['username'])) {
             </div>
         </div>
     </nav>
-    <form  class="formEditCont2" id="formularioG">
-        <div class="form-floating mb-3">
-            <input type="number" required class="form-control" name="id" id="id">
-            <label for="floatingInput">Id*</label>
+    <div class="container-fluid search">
+        <div class="d-flex" role="search">
+            <input class="form-control me-2" id="cajaSearch" type="search" placeholder="Digita una id, Ejem : 1044612757" aria-label="Search">
         </div>
-
-        <div class="form-floating mb-3">
-            <input type="text" required class="form-control" name="name" id="name">
-            <label for="floatingInput">Nombre*</label>
-        </div>
-
-        <div class="form-floating mb-3">
-            <input type="number" required min='5' max='25' name="age" class="form-control" id="age">
-            <label for="floatingInput">Edad*</label>
-        </div>
-
-        <div class="form-floating mb-3">
-            <input type="text" required class="form-control" name="grade" id="grade">
-            <label for="floatingInput">Grado*</label>
-        </div>
-
-        <select class="form-select form-select-lg" required name="entity" id="entity" aria-label="Default select example">
-            <option selected disabled>Elige la entidad</option>
-            <option value="SanJose">SanJose</option>
-            <option value="Insecaldas">Insecaldas</option>
-        </select>
-
-        <div class="contBtns">
-            <button type="submit" class="btn btn-success" id="btnG">Generar codigo Qr <i class="fa-solid fa-arrow-down animate-bounce" id="arrowDown"></i></button>
-        </div>
-
-        <div id="codigoQr"></div>
-
-    </form>
+    </div>
+    <div class="col-md-8 contTable">
+    </div>
+    <?php require_once './generatorQrF.php'?>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
