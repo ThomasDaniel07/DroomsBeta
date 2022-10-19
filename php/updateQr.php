@@ -45,7 +45,7 @@ if ($dataQuery['state'] !== $state) {
 
     }
 }else {
-    $message = 'Este estudiante ya almorzo, RECOMENDACION : ir a la pestaña de reportar y realizar el proceso';
+    $message = "El estudiante $name de el grado $grade ya almorzo, se recomienda no dejarlo ingresar";
     echo json_encode(array('STATUS'=>false,'MESSAGE'=>$message));
 }
 
