@@ -1,6 +1,6 @@
 <?php
 
 define('HOSTNAME', 'localhost');
-define('USERNAME', 'root');
-define('PASSWORD', '');
-define('DB', 'appdb');
+define('USERNAME', 'id19754986_root');
+define('PASSWORD', 'v%eviANY0*7<GRKM');
+define('DB', 'id19754986_appdb');

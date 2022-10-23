@@ -22,7 +22,7 @@ if (empty($_SESSION['username'])) {
   <body>
     <?php require 'nav.php' ?>
 
-    
+   
 
     <script src="../js/instascan.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
