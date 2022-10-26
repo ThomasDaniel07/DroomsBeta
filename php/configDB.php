@@ -1,6 +1,6 @@
 <?php
 
-define('HOSTNAME', 'localhost');
-define('USERNAME', 'id19754986_root');
-define('PASSWORD', 'v%eviANY0*7<GRKM');
-define('DB', 'id19754986_appdb');
+define('HOSTNAME', 'sql207.epizy.com');
+define('USERNAME', 'epiz_32870145');
+define('PASSWORD', 'TuTwR1mP1e2Spp');
+define('DB', 'epiz_32870145_appdb');
